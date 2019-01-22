@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15-nov-2018 17.05.56 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="MAGISTRALI_INT" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.MAGISTRALI_INT.dao.Preweb" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="PREWEB">
+        <composite-id class="luiss.it.MAGISTRALI_INT.dao.PrewebId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="anno" type="string">
+                <column length="4" name="PREWEB_ANNO"/>
+            </key-property>
+            <key-property name="sessione" type="string">
+                <column length="2" name="PREWEB_SESSIONE"/>
+            </key-property>
+            <key-property name="cf" type="string">
+                <column length="16" name="PREWEB_CODFISC"/>
+            </key-property>
+        </composite-id>
+        <property generated="never" lazy="false" name="prewebCognome" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="PREWEB_COGNOME"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNome" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="PREWEB_NOME"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebSesso" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_SESSO"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNascom" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_NASCOM"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNaspr" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_NASPR"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNasdata" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="PREWEB_NASDATA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNazione" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_NAZIONE"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebRescom" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_RESCOM"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebResind" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_RESIND"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebRespr" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_RESPR"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebRescap" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="PREWEB_RESCAP"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebTelefono" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="PREWEB_TELEFONO"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebCellulare" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="PREWEB_CELLULARE"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebEmail" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="PREWEB_EMAIL"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIstscol" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_ISTSCOL"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIstcom" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_ISTCOM"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIstind" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_ISTIND"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIstpr" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_ISTPR"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIstcap" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="PREWEB_ISTCAP"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIsttipo" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_ISTTIPO"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebFac" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_FAC"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebCorsolau" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_CORSOLAU"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebTipopag" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_TIPOPAG"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebDatapag" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="PREWEB_DATAPAG"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMedia3" optimistic-lock="true" type="string" unique="false">
+            <column length="6" name="PREWEB_MEDIA3"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMedia4" optimistic-lock="true" type="string" unique="false">
+            <column length="6" name="PREWEB_MEDIA4"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebSedesost" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_SEDESOST"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebDatadomanda" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="PREWEB_DATADOMANDA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebConfpag" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_CONFPAG"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebDatamod" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="PREWEB_DATAMOD"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebTitstr3" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_TITSTR3"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebTitstr4" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_TITSTR4"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebProg" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="PREWEB_PROG"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebLinguaIi" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_LINGUA_II"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebVoto60" optimistic-lock="true" type="string" unique="false">
+            <column length="5" name="PREWEB_VOTO_60"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebVoto100" optimistic-lock="true" type="string" unique="false">
+            <column length="6" name="PREWEB_VOTO_100"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebTitstr" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_TITSTR"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebAnnodipl" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="PREWEB_ANNODIPL"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebAutentica" optimistic-lock="true" type="string" unique="false">
+            <column length="8" name="PREWEB_AUTENTICA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebPagella" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_PAGELLA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIstemail" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="PREWEB_ISTEMAIL" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIsttel" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="PREWEB_ISTTEL" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebDesk" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_DESK"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebConsauto" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_CONSAUTO"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNazOrdinamento" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_NAZ_ORDINAMENTO"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebAmme" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_AMME" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMedtot" optimistic-lock="true" type="double" unique="false">
+            <column name="PREWEB_MEDTOT" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMedtst" optimistic-lock="true" type="double" unique="false">
+            <column name="PREWEB_MEDTST" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebVotofin" optimistic-lock="true" type="double" unique="false">
+            <column name="PREWEB_VOTOFIN" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebFilpre1" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_FILPRE1" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebGraduatoria" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_GRADUATORIA" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebSegno" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_SEGNO" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNdesatte" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_NDESATTE" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNderrate" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_NDERRATE" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNdnonris" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_NDNONRIS" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prewenNazioneNascita" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEN_NAZIONE_NASCITA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebEuNoneu" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="PREWEB_EU_NONEU"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebStateProvinceRes" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_STATE_PROVINCE_RES"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNazioneRes" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_NAZIONE_RES"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebFax" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="PREWEB_FAX"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNazioneScuola" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_NAZIONE_SCUOLA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebWebScuola" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_WEB_SCUOLA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMmSd" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_MM_SD"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebYyyySd" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="PREWEB_YYYY_SD"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMmGd" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_MM_GD"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebYyyyGd" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="PREWEB_YYYY_GD"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMmEgd" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_MM_EGD"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebYyyyEgd" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="PREWEB_YYYY_EGD"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebAnniScuola" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="PREWEB_ANNI_SCUOLA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebVerbalSectionScore" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_VERBAL_SECTION_SCORE"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebAnaliticalWritingSectionScore" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_ANALITICAL_WRITING_SECTION_SCORE"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebQuantitativeScore" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_QUANTITATIVE_SCORE"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebTotalScore" optimistic-lock="true" type="integer" unique="false">
+            <column name="PREWEB_TOTAL_SCORE"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebAltreQualifiche1" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_ALTRE_QUALIFICHE1"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebAltreQualifiche2" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_ALTRE_QUALIFICHE2"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebAltreQualifiche3" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_ALTRE_QUALIFICHE3"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebStateProvinceScuola" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_STATE_PROVINCE_SCUOLA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebUniversita" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_UNIVERSITA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebUnivcom" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_UNIVCOM"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebUnivind" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_UNIVIND"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebUnivcap" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="PREWEB_UNIVCAP"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebStateProvinceUniversita" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_STATE_PROVINCE_UNIVERSITA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebNazioneUniversita" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_NAZIONE_UNIVERSITA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebWebUniversita" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_WEB_UNIVERSITA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMmSdUniv" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_MM_SD_UNIV"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebYyyySdUniv" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="PREWEB_YYYY_SD_UNIV"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebMmEgdUniv" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_MM_EGD_UNIV"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebYyyyEgdUniv" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="PREWEB_YYYY_EGD_UNIV"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebGmatGre" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="PREWEB_GMAT_GRE"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebIndirizzo" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="PREWEB_INDIRIZZO"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebLaureaConferita" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PREWEB_LAUREA_CONFERITA"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebLeastThreeYears" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="PREWEB_LEAST_THREE_YEARS"/>
+        </property>
+        <property generated="never" lazy="false" name="prewebPrivacy" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="PREWEB_PRIVACY"/>
+        </property>
+    </class>
+</hibernate-mapping>

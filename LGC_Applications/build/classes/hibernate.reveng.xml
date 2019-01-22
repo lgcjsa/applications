@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="LGCDB_Clienti" match-name="Comuni" />
+	<table-filter match-name="Province" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Regioni" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Nazioni" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Nazioni_ENG"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Continenti"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Labels" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Lingue" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Contesti" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Config" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="MIUR_SCUOLE"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="MIUR_TIPI_SCUOLE"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="TIPI_TITOLO_SUP"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Discipline_Sportive"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Dati_Sportivi"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Livelli_Sportivi"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Risultati_Sportivi"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="CDS" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Anni_Accademici"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Persone" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Indirizzi"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Telefoni" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Emails" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Dati_Accademici"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Fotografie"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Controlli"
+		match-catalog="LGCDB_Clienti">
+	</table-filter>
+	<table-filter match-name="Log" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Sedi" match-catalog="LGCDB_Clienti"></table-filter>
+	<table-filter match-name="Tokens" match-catalog="LGCDB_Clienti"></table-filter>
+	<table catalog="LGCDB_Clienti" name="Comuni">
+		<column name="ID" type="integer"></column>
+		<column name="ID_Province" type="integer"></column>
+		<column name="Codice_Catastale" type="string"></column>
+		<column name="Comune" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Province">
+		<column name="ID" type="integer"></column>
+		<column name="Provincia" type="string"></column>
+		<column name="ID_Regioni" type="integer"></column>
+		<column name="Sigla" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Regioni">
+		<column name="ID" type="integer"></column>
+		<column name="ID_Nazioni" type="integer"></column>
+		<column name="Regione" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Continenti">
+		<column name="ID" type="integer"></column>
+		<column name="Continente" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Nazioni">
+		<column name="ID" type="integer"></column>
+		<column name="Codice" type="string"></column>
+		<column name="Codice_Catastale" type="string"></column>
+		<column name="Nazione" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Nazioni_ENG">
+		<column name="ID" type="integer"></column>
+		<column name="Codice" type="string"></column>
+		<column name="Codice_Catastale" type="string"></column>
+		<column name="Nazione" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Labels">
+		<column name="ID" type="integer"></column>
+		<column name="Codice_Label" type="integer"></column>
+		<column name="Label" type="string"></column>
+		<column name="Lingue_Codice" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Lingue">
+		<column name="ID" type="integer"></column>
+		<column name="Codice" type="string"></column>
+		<column name="Lingua" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Contesti">
+		<column name="ID" type="integer"></column>
+		<column name="Codice" type="string"></column>
+		<column name="Descrizione" type="string"></column>
+		<column name="Note" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Config">
+		<column name="ID" type="integer"></column>
+		<column name="Recapiti" type="string"></column>
+		<column name="Residenza" type="string"></column>
+		<column name="Diploma" type="string"></column>
+		<column name="Laurea" type="string"></column>
+		<column name="Genitore" type="string"></column>
+		<column name="Fotografia" type="string"></column>
+		<column name="URL_OK" type="string"></column>
+		<column name="URL_KO" type="string"></column>
+		<column name="Scadenza_Visibilita" type="timestamp"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="MIUR_SCUOLE">
+		<column name="ID_SCUOLA" type="integer"></column>
+		<column name="ID_Comuni" type="integer"></column>
+		<column name="STATALE_FLG" type="integer"></column>
+		<column name="TELEFONO" type="string"></column>
+		<column name="DATA_CARIC" type="date"></column>
+		<column name="TIPO_SCUOLA_MIUR_COD" type="string"></column>
+		<column name="COMUNE" type="string"></column>
+		<column name="TIPOLOGIA" type="string"></column>
+		<column name="COD_SCUOLA" type="string"></column>
+		<column name="CAP" type="string"></column>
+		<column name="INDIRIZZO" type="string"></column>
+		<column name="PARITA" type="string"></column>
+		<column name="LIVELLO_FUNZIONALE" type="string"></column>
+		<column name="COD_ISTAT_MIUR" type="string"></column>
+		<column name="ID_Regioni" type="integer"></column>
+		<column name="CODICE_SCUOLA_RIFERIMENTO" type="string"></column>
+		<column name="DENOMINAZIONE" type="string"></column>
+		<column name="REGIONE" type="string"></column>
+		<column name="STATO_CARIC" type="integer"></column>
+		<column name="ID_Province" type="integer"></column>
+		<column name="PROV" type="string"></column>
+		<column name="TIPOLOGIA_SEDE" type="string"></column>
+		<column name="TARGA" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="MIUR_TIPI_SCUOLE">
+		<column name="TIPO_SCUOLA_COD" type="string"></column>
+		<column name="DES" type="string"></column>
+		<column name="STATO_CARIC" type="integer"></column>
+		<column name="DATA_CARIC" type="date"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="TIPI_TITOLO_SUP">
+		<column name="TIPO_TITOLO_COD" type="string"></column>
+		<column name="ID_TITOLO" type="integer"></column>
+		<column name="ID_DIPLOMA" type="integer"></column>
+		<column name="DES" type="string"></column>
+		<column name="SYS_FLG" type="integer"></column>
+		<column name="ID_MACRO_TIPO" type="integer"></column>
+		<column name="ABIL_VIS_FLG" type="integer"></column>
+		<column name="ID_TIPO_IST" type="integer"></column>
+		<column name="ANNO_INT_FLG" type="integer"></column>
+		<column name="TIPOLOGIA_COD" type="string"></column>
+		<column name="ALMA_COD" type="integer"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Discipline_Sportive">
+		<column name="ID" type="integer"></column>
+		<column name="Sport" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Risultati_Sportivi">
+		<column name="ID" type="integer"></column>
+		<column name="ID_Dati_sportivi" type="integer"></column>
+		<column name="Descrizione" type="string"></column>
+		<column name="Medaglia" type="string"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+		<column name="Data_UPDATE" type="timestamp"></column>
+
+	</table>
+	<table catalog="LGCDB_Clienti" name="Dati_Sportivi">
+		<column name="ID" type="integer"></column>
+		<column name="Lettera_Motivazionale" type="string"></column>
+		<column name="ID_Livelli_Sportivi" type="integer"></column>
+		<column name="Anno_Inizio_Agonismo" type="integer"></column>
+		<column name="Lettera_Referenziale" type="string"></column>
+		<column name="Societa_Di_Appertenenza" type="string"></column>
+		<column name="ID_Persone" type="integer"></column>
+		<column name="ID_Discipline_Sportive" type="integer"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+		<column name="Data_UPDATE" type="timestamp"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Livelli_Sportivi">
+		<column name="ID" type="integer"></column>
+		<column name="Livello" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="CDS">
+		<column name="COD" type="string"></column>
+		<column name="DES" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Anni_Accademici">
+		<column name="ID" type="integer"></column>
+		<column name="DES" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Persone">
+		<column name="ID" type="integer"></column>
+		<column name="Codice_Catastale_Luogo_Nascita" type="string"></column>
+		<column name="Luogo_Nascita" type="string"></column>
+		<column name="Codice_Fiscale" type="string"></column>
+		<column name="Cognome" type="string"></column>
+		<column name="Data_UPDATE" type="timestamp"></column>
+		<column name="Nazione_Nascita" type="string"></column>
+		<column name="Data_Nascita" type="date"></column>
+		<column name="Codice_Catastale_Nazione_Nascita" type="string"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+		<column name="Nome" type="string"></column>
+		<column name="Sesso" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Telefoni">
+		<column name="ID" type="integer"></column>
+		<column name="Data_UPDATE" type="timestamp"></column>
+		<column name="ID_Persone" type="integer"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+		<column name="Telefono" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Indirizzi">
+		<column name="ID" type="integer"></column>
+		<column name="ID_Persone" type="integer"></column>
+		<column name="Data_UPDATE" type="timestamp"></column>
+		<column name="Civico" type="string"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+		<column name="Nazioni_Codice_Catastale" type="string"></column>
+		<column name="ID_Tipologie_Indirizzi" type="integer"></column>
+		<column name="Indirizzo" type="string"></column>
+		<column name="Nazione_Denominazione" type="string"></column>
+		<column name="Comuni_Codice_Catastale" type="string"></column>
+		<column name="Comune_Denominazione" type="string"></column>
+		<column name="CAP" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Emails">
+		<column name="ID" type="integer"></column>
+		<column name="Data_UPDATE" type="timestamp"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+		<column name="Email" type="string"></column>
+		<column name="ID_Persone" type="integer"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Dati_Accademici">
+		<column name="ID" type="integer"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+		<column name="ID_Persone" type="integer"></column>
+		<column name="Nota" type="string"></column>
+		<column name="Anno_Acc" type="integer"></column>
+		<column name="Matricola_LUISS" type="string"></column>
+		<column name="CDS_Scelta" type="string"></column>
+		<column name="Anno_Corso" type="integer"></column>
+		<column name="Data_UPDATE" type="timestamp"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Fotografie">
+		<column name="ID" type="integer"></column>
+		<column name="Foto" type="binary"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+		<column name="ContentType" type="string"></column>
+		<column name="Format" type="string"></column>
+		<column name="Data_UPDATE" type="timestamp"></column>
+		<column name="ID_Persone" type="integer"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Controlli">
+		<column name="ID" type="integer"></column>
+		<column name="Max" type="integer"></column>
+		<column name="Input_Name" type="string"></column>
+		<column name="Obbligatorio" type="string"></column>
+		<column name="ID_Contesti" type="integer"></column>
+		<column name="Reg_Exp" type="string"></column>
+		<column name="Min" type="integer"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Log">
+		<column name="ID" type="integer"></column>
+		<column name="Descrizione" type="string"></column>
+		<column name="Data_INSERT" type="timestamp"></column>
+	</table>
+
+	<table catalog="LGCDB_Clienti" name="Sedi">
+		<column name="ID" type="integer"></column>
+		<column name="ID_Contesti" type="integer"></column>
+		<column name="Visibile" type="string"></column>
+		<column name="Descrizione" type="string"></column>
+	</table>
+	<table catalog="LGCDB_Clienti" name="Tokens">
+		<column name="Password" type="string"></column>
+	</table>
+</hibernate-reverse-engineering>

@@ -1,0 +1,517 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:a="http://www.zkoss.org/2005/zk/annotation"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:n="xhtml">
+	<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+	<?page title="Auto Generated index.zul"?>
+	<window id="win" use="luiss.it.windows.Index" border="noborder"
+		contentStyle="overflow:auto" width="100%">
+		<div align="right">
+
+			<a onClick="win.setLingua(1)">
+				<image
+					src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/flags/1x1/it.svg"
+					width="5%" height="25px" />
+			</a>
+			<a onClick="win.setLingua(2)">
+				<image
+					src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/flags/1x1/gb.svg"
+					width="5%" height="25px" />
+			</a>
+
+		</div>
+		<div align="center">
+			<div align="left" width="70%">
+				<image src="./images/logo.jpg" />
+			</div>
+			<div align="center" width="70%">
+				<label value="${win.contesto.descrizione}"
+					style="font-size: 27px;" width="100%" />
+			</div>
+			<div height="10px" />
+			<vlayout id="myLayout" width="70%">
+				<hbox>
+					<groupbox title="${win.getLabel(3)}" mold="3d"
+						width="99%">
+						<panel width="100%">
+							<panelchildren style="padding:5px;">
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(1)}" />
+										</row>
+										<row>
+
+											<textbox id="nome"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(2)}" />
+										</row>
+										<row>
+
+											<textbox id="cognome"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(4)}" />
+										</row>
+										<row>
+											<radiogroup id="sesso">
+												<radio id="uomo"
+													label="M" />
+												<radio id="donna"
+													label="F" />
+											</radiogroup>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(5)}" />
+										</row>
+										<row>
+											<datebox id="data_nascita" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(6)}" />
+										</row>
+										<row>
+											<listbox id="nas_nazione"
+												model="@{win.nazioni}" rows="1" mold="select"
+												onSelect="win.selezioneNazione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.NazioniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(7)}" />
+										</row>
+										<row>
+											<listbox id="nas_regione"
+												model="@{win.regioni}" rows="1" mold="select"
+												onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.RegioniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(8)}" />
+										</row>
+										<row>
+											<listbox id="nas_provincia"
+												model="@{win.province}" rows="1" mold="select"
+												onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ProvinceRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(9)}" />
+										</row>
+										<row>
+											<listbox id="nas_comune"
+												model="@{win.comuni}" rows="1" mold="select"
+												onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ComuniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(10)}" />
+										</row>
+										<row>
+											<textbox id="nas_luogo"
+												width="100%" readonly="true" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(21)}" />
+										</row>
+										<row>
+											<textbox id="codice_fiscale"
+												width="30%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="${win.visibilitaResidenza}">
+					<groupbox title="${win.getLabel(12)}" mold="3d"
+						width="99%">
+						<panel width="100%">
+							<panelchildren style="padding:5px;">
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(13)}" />
+										</row>
+										<row>
+											<listbox id="res_nazione"
+												model="@{win.nazioni}" rows="1" mold="select"
+												onSelect="win.selezioneNazione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.NazioniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(14)}" />
+										</row>
+										<row>
+											<listbox id="res_regione"
+												model="@{win.regioni}" rows="1" mold="select"
+												onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.RegioniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(15)}" />
+										</row>
+										<row>
+											<listbox id="res_provincia"
+												model="@{win.province}" rows="1" mold="select"
+												onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ProvinceRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(16)}" />
+										</row>
+										<row>
+											<listbox id="res_comune"
+												model="@{win.comuni}" rows="1" mold="select"
+												onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ComuniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(17)}" />
+										</row>
+										<row>
+											<textbox id="res_luogo"
+												width="100%" readonly="true" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(18)}" />
+										</row>
+										<row>
+											<textbox id="res_indirizzo"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(19)}" />
+										</row>
+										<row>
+											<textbox id="res_civico"
+												width="10%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(20)}" />
+										</row>
+										<row>
+											<textbox id="res_cap"
+												width="10%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="${win.visibilitaRecapiti}">
+					<groupbox title="${win.getLabel(11)}" mold="3d"
+						width="99%">
+						<panel width="100%">
+							<panelchildren style="padding:5px;">
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(22)}" />
+										</row>
+										<row>
+											<textbox id="email"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(23)}" />
+										</row>
+										<row>
+											<textbox id="telefono"
+												width="20%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="${win.visibilitaGenitore}">
+					<groupbox title="${win.getLabel(24)}" mold="3d"
+						width="99%">
+						<panel width="100%">
+							<panelchildren style="padding:5px;">
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(1)}" />
+										</row>
+										<row>
+											<textbox id="gen_nome"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(2)}" />
+											<textbox id="gen_cognome"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(4)}" />
+										</row>
+										<row>
+											<radiogroup
+												id="gen_sesso">
+												<radio label="M" />
+												<radio label="F" />
+											</radiogroup>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(5)}" />
+										</row>
+										<row>
+											<datebox
+												id="gen_data_nascita" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(6)}" />
+										</row>
+										<row>
+											<listbox id="gen_nazione"
+												model="@{win.nazioni}" rows="1" mold="select"
+												onSelect="win.selezioneNazione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.NazioniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(7)}" />
+										</row>
+										<row>
+											<listbox id="gen_regione"
+												model="@{win.regioni}" rows="1" mold="select"
+												onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.RegioniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(8)}" />
+										</row>
+										<row>
+											<listbox id="gen_provincia"
+												model="@{win.province}" rows="1" mold="select"
+												onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ProvinceRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(9)}" />
+										</row>
+										<row>
+											<listbox id="gen_comune"
+												model="@{win.comuni}" rows="1" mold="select"
+												onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ComuniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(10)}" />
+										</row>
+										<row>
+											<textbox id="gen_luogo"
+												width="100%" readonly="true" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(21)}" />
+										</row>
+										<row>
+											<textbox
+												id="gen_codice_fiscale" width="30%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="${win.visibilitaDiploma}">
+					<groupbox title="${win.getLabel(25)}" mold="3d"
+						width="99%">
+						<panel width="100%">
+							<panelchildren style="padding:5px;">
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(13)}" />
+										</row>
+										<row>
+											<listbox id="scu_nazione"
+												model="@{win.nazioni}" rows="1" mold="select"
+												onSelect="win.selezioneNazione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.NazioniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(14)}" />
+										</row>
+										<row>
+											<listbox id="scu_regione"
+												model="@{win.regioni}" rows="1" mold="select"
+												onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.RegioniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(15)}" />
+										</row>
+										<row>
+											<listbox id="scu_provincia"
+												model="@{win.province}" rows="1" mold="select"
+												onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ProvinceRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(16)}" />
+										</row>
+										<row>
+											<listbox id="scu_comune"
+												model="@{win.comuni}" rows="1" mold="select"
+												onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ComuniRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(17)}" />
+										</row>
+										<row>
+											<textbox id="scu_luogo"
+												width="100%" readonly="true" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(26)}" />
+										</row>
+										<row>
+											<listbox id="tipo_scuola"
+												model="@{win.tipiScuole}" rows="1" mold="select" onSelect=""
+												itemRenderer="luiss.it.renderers.TipiScuoleRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(32)}" />
+										</row>
+										<row>
+											<listbox id="scuola"
+												model="@{win.scuole}" rows="1" mold="select" onSelect=""
+												itemRenderer="luiss.it.renderers.IstitutiRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(31)}" />
+										</row>
+										<row>
+											<textbox
+												id="scu_denominazione" width="100%" readonly="true" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(27)}" />
+										</row>
+										<row>
+											<radiogroup
+												id="stato_titolo">
+												<radio id="ipotesi"
+													value="I" label="Da conseguire" />
+												<radio id="conseguito"
+													value="C" label="Conseguito" />
+											</radiogroup>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(30)}" />
+										</row>
+										<row>
+											<listbox id="tipo_titolo"
+												model="@{win.tipiTitolo}" rows="1" mold="select" onSelect=""
+												itemRenderer="luiss.it.renderers.TipiTitoloRenderer"
+												width="100%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(28)}" />
+										</row>
+										<row>
+											<intbox id="voto_diploma"
+												width="10%" readonly="true" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(29)}" />
+											<intbox id="anno_diploma"
+												width="10%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+			</vlayout>
+		</div>
+
+	</window>
+</zk>

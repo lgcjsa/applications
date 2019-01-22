@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-dic-2018 16.15.27 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="LGCDB_Clienti" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.LGCDB_Clienti.dao.Indirizzi" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Indirizzi">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="indirizzo" optimistic-lock="true" type="string" unique="false">
+            <column name="Indirizzo"/>
+        </property>
+        <property generated="never" lazy="false" name="civico" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="Civico"/>
+        </property>
+        <property generated="never" lazy="false" name="nazioniCodiceCatastale" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="Nazioni_Codice_Catastale"/>
+        </property>
+        <property generated="never" lazy="false" name="comuniCodiceCatastale" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="Comuni_Codice_Catastale"/>
+        </property>
+        <property generated="never" lazy="false" name="comuneDenominazione" optimistic-lock="true" type="string" unique="false">
+            <column name="Comune_Denominazione"/>
+        </property>
+        <property generated="never" lazy="false" name="nazioneDenominazione" optimistic-lock="true" type="string" unique="false">
+            <column name="Nazione_Denominazione"/>
+        </property>
+        <property generated="never" lazy="false" name="cap" optimistic-lock="true" type="string" unique="false">
+            <column length="5" name="CAP"/>
+        </property>
+        <property generated="never" lazy="false" name="idTipologieIndirizzi" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_Tipologie_Indirizzi"/>
+        </property>
+        <property generated="never" lazy="false" name="idPersone" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_Persone"/>
+        </property>
+        <property generated="never" lazy="false" name="dataInsert" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_INSERT"/>
+        </property>
+        <property generated="never" lazy="false" name="dataUpdate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_UPDATE"/>
+        </property>
+    </class>
+</hibernate-mapping>

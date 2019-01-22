@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="MAGISTRALI_INT" match-name="PREWEB" />
+	<table-filter match-catalog="MAGISTRALI_INT" match-name="CDLScelta" />
+	<table catalog="MAGISTRALI_INT" name="CDLScelta">
+		<primary-key>
+			<key-column name="Facolta" type="string" property="fac" />
+			<key-column name="CorsoDiLaurea" type="string"
+				property="cds" />
+			<key-column name="Indirizzo" type="string" property="ind" />
+		</primary-key>
+		<column name="Selezionabile" type="string"></column>
+		<column name="Descrizione" type="string"></column>
+	</table>
+	<table catalog="MAGISTRALI_INT" name="PREWEB">
+		<primary-key>
+			<key-column name="PREWEB_ANNO" type="string" property="anno" />
+			<key-column name="PREWEB_SESSIONE" type="string" property="sessione" />
+			<key-column name="PREWEB_CODFISC" type="string" property="cf" />
+		</primary-key>
+		<column name="PREWEB_NDESATTE" type="integer"></column>
+		<column name="PREWEB_SEGNO" type="string"></column>
+		<column name="PREWEB_ALTRE_QUALIFICHE3" type="string"></column>
+		<column name="PREWEB_ANNI_SCUOLA" type="string"></column>
+		<column name="PREWEB_STATE_PROVINCE_UNIVERSITA" type="string"></column>
+		<column name="PREWEB_NASCOM" type="string"></column>
+		<column name="PREWEB_GRADUATORIA" type="integer"></column>
+		<column name="PREWEB_UNIVCAP" type="string"></column>
+		<column name="PREWEB_AMME" type="string"></column>
+		<column name="PREWEB_DATAPAG" type="date"></column>
+		<column name="PREWEB_NDNONRIS" type="integer"></column>
+		<column name="PREWEB_YYYY_EGD" type="string"></column>
+		<column name="PREWEB_GMAT_GRE" type="string"></column>
+		<column name="PREWEB_TELEFONO" type="string"></column>
+		<column name="PREWEB_DATAMOD" type="date"></column>
+		<column name="PREWEB_PROG" type="string"></column>
+		<column name="PREWEB_DESK" type="integer"></column>
+		<column name="PREWEB_ISTTEL" type="string"></column>
+		<column name="PREWEB_YYYY_GD" type="string"></column>
+		<column name="PREWEB_TIPOPAG" type="string"></column>
+		<column name="PREWEB_NASDATA" type="date"></column>
+		<column name="PREWEB_RESCOM" type="string"></column>
+		<column name="PREWEB_TITSTR3" type="string"></column>
+		<column name="PREWEB_PAGELLA" type="string"></column>
+		<column name="PREWEB_UNIVERSITA" type="string"></column>
+		<column name="PREWEB_FAC" type="string"></column>
+		<column name="PREWEB_ISTCOM" type="string"></column>
+		<column name="PREWEB_YYYY_SD_UNIV" type="string"></column>
+		<column name="PREWEB_ISTIND" type="string"></column>
+		<column name="PREWEB_MM_EGD" type="string"></column>
+		<column name="PREWEB_ANALITICAL_WRITING_SECTION_SCORE" type="integer"></column>
+		<column name="PREWEB_ANNODIPL" type="string"></column>
+		<column name="PREWEB_AUTENTICA" type="string"></column>
+		<column name="PREWEB_SEDESOST" type="string"></column>
+		<column name="PREWEB_COGNOME" type="string"></column>
+		<column name="PREWEB_TOTAL_SCORE" type="integer"></column>
+		<column name="PREWEB_VOTO_100" type="string"></column>
+		<column name="PREWEB_ISTTIPO" type="string"></column>
+		<column name="PREWEB_MEDIA3" type="string"></column>
+		<column name="PREWEB_STATE_PROVINCE_RES" type="string"></column>
+		<column name="PREWEB_LINGUA_II" type="string"></column>
+		<column name="PREWEB_TITSTR" type="string"></column>
+		<column name="PREWEB_WEB_UNIVERSITA" type="string"></column>
+		<column name="PREWEB_CONSAUTO" type="string"></column>
+		<column name="PREWEB_STATE_PROVINCE_SCUOLA" type="string"></column>
+		<column name="PREWEB_YYYY_SD" type="string"></column>
+		<column name="PREWEB_RESPR" type="string"></column>
+		<column name="PREWEB_UNIVCOM" type="string"></column>
+		<column name="PREWEB_MM_SD" type="string"></column>
+		<column name="PREWEB_NAZIONE_UNIVERSITA" type="string"></column>
+		<column name="PREWEB_YYYY_EGD_UNIV" type="string"></column>
+		<column name="PREWEN_NAZIONE_NASCITA" type="string"></column>
+		<column name="PREWEB_LAUREA_CONFERITA" type="string"></column>
+		<column name="PREWEB_QUANTITATIVE_SCORE" type="integer"></column>
+		<column name="PREWEB_MEDIA4" type="string"></column>
+		<column name="PREWEB_NAZ_ORDINAMENTO" type="string"></column>
+		<column name="PREWEB_RESCAP" type="string"></column>
+		<column name="PREWEB_MM_GD" type="string"></column>
+		<column name="PREWEB_ISTCAP" type="string"></column>
+		<column name="PREWEB_WEB_SCUOLA" type="string"></column>
+		<column name="PREWEB_ISTSCOL" type="string"></column>
+		<column name="PREWEB_MEDTOT" type="double"></column>
+		<column name="PREWEB_VERBAL_SECTION_SCORE" type="integer"></column>
+		<column name="PREWEB_NASPR" type="string"></column>
+		<column name="PREWEB_ISTPR" type="string"></column>
+		<column name="PREWEB_CELLULARE" type="string"></column>
+		<column name="PREWEB_NAZIONE_RES" type="string"></column>
+		<column name="PREWEB_ALTRE_QUALIFICHE1" type="string"></column>
+		<column name="PREWEB_ISTEMAIL" type="string"></column>
+		<column name="PREWEB_DATADOMANDA" type="date"></column>
+		<column name="PREWEB_INDIRIZZO" type="string"></column>
+		<column name="PREWEB_NOME" type="string"></column>
+		<column name="PREWEB_FAX" type="string"></column>
+		<column name="PREWEB_LEAST_THREE_YEARS" type="string"></column>
+		<column name="PREWEB_NAZIONE_SCUOLA" type="string"></column>
+		<column name="PREWEB_VOTO_60" type="string"></column>
+		<column name="PREWEB_MM_SD_UNIV" type="string"></column>
+		<column name="PREWEB_RESIND" type="string"></column>
+		<column name="PREWEB_VOTOFIN" type="double"></column>
+		<column name="PREWEB_MM_EGD_UNIV" type="string"></column>
+		<column name="PREWEB_NAZIONE" type="string"></column>
+		<column name="PREWEB_EMAIL" type="string"></column>
+		<column name="PREWEB_CORSOLAU" type="string"></column>
+		<column name="PREWEB_EU_NONEU" type="string"></column>
+		<column name="PREWEB_SESSO" type="string"></column>
+		<column name="PREWEB_MEDTST" type="double"></column>
+		<column name="PREWEB_ALTRE_QUALIFICHE2" type="string"></column>
+		<column name="PREWEB_UNIVIND" type="string"></column>
+		<column name="PREWEB_CONFPAG" type="string"></column>
+		<column name="PREWEB_FILPRE1" type="string"></column>
+		<column name="PREWEB_NDERRATE" type="integer"></column>
+		<column name="PREWEB_TITSTR4" type="string"></column>
+		<column name="PREWEB_PRIVACY" type="string"></column>
+	</table>
+</hibernate-reverse-engineering>

@@ -1,0 +1,530 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:a="http://www.zkoss.org/2005/zk/annotation"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:n="xhtml">
+	<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+	<?page title="Auto Generated index.zul"?>
+	<window id="win" use="luiss.it.windows.Internazionali_L2"
+		border="noborder" width="100%" height="10000px">
+		<div align="center" width="100%">
+			<div align="left" width="70%">
+				<image src="./images/logo.jpg" />
+			</div>
+			<div align="center" width="70%">
+				<label value="${win.getLabel(67)}"
+					style="font-size: 27px;" width="95%" />
+			</div>
+			<zscript><![CDATA[
+		                  
+			win.setPagina("internazionali_L2.zul")                  
+		                  
+		]]></zscript>                  
+			<div height="10px" width="100%" />
+			<vlayout id="myLayout" width="70%">
+				<hbox width="100%">
+					<groupbox
+						width="100%">
+						<panel width="100%">
+							<panelchildren>
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />  
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(1)}" />
+										</row>
+										<row>
+
+											<textbox id="nome" maxlength="40"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(2)}" />
+										</row>
+										<row>
+
+											<textbox id="cognome" maxlength="40"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(4)}" />
+										</row>
+										<row>
+											<radiogroup id="sesso">
+												<radio id="uomo"
+													label="M" />
+												<radio id="donna"
+													label="F" />
+											</radiogroup>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(5)}" />
+										</row>
+										<row>
+											<datebox id="data_nascita" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(6)}" />
+										</row>
+										<row>
+											<listbox id="nas_nazione"
+												model="@{win.nazioniEng}" rows="1" mold="select"
+												onSelect="win.selezioneNazioneEng(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.NazioniEngRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(7)}" />
+										</row>
+										<row>
+											<listbox id="nas_regione"
+												model="@{win.regioni}" rows="1" mold="select"
+												onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.RegioniRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(8)}" />
+										</row>
+										<row>
+											<listbox id="nas_provincia"
+												model="@{win.province}" rows="1" mold="select"
+												onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ProvinceRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(9)}" />
+										</row>
+										<row>
+											<listbox id="nas_comune"
+												model="@{win.comuni}" rows="1" mold="select"
+												onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ComuniRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(10)}" />
+										</row>
+										<row>
+											<textbox id="nas_luogo" maxlength="100"
+												width="90%" readonly="true" />
+										</row>
+										<row visible="false">
+											<label
+												value="${win.getLabel(21)}" />
+										</row>
+										
+										<row visible="false">
+											<textbox id="codice_fiscale"  maxlength="16"
+												width="30%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox width="100%">
+					<groupbox
+						width="100%">
+						<panel width="100%">
+							<panelchildren>
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(74)}" />
+										</row>
+										<row>
+											<listbox id="nazionalita"
+												model="@{win.nazioniEng}" rows="1" mold="select"
+												itemRenderer="luiss.it.renderers.NazioniEngRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(75)}" />
+										</row>
+										<row>
+											<textbox id="permanent_address" maxlength="100"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(76)}" />
+										</row>
+										<row>
+											<textbox id="city" maxlength="100"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(77)}" />
+										</row>
+										<row>
+											<textbox id="state_province" maxlength="100"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(20)}" />
+										</row>
+										<row>
+											<textbox id="zip" maxlength="5"
+												width="10%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(79)}" />
+										</row>
+										<row>
+											<listbox id="country"
+												model="@{win.nazioniEng}" rows="1" mold="select"
+												itemRenderer="luiss.it.renderers.NazioniEngRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(80)}" />
+										</row>
+										<row>
+											<textbox id="telephone" maxlength="15"
+												width="20%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(81)}" />
+										</row>
+										<row>
+											<textbox id="mobile" maxlength="15"
+												width="20%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(22)}" />
+										</row>
+										<row>
+											<textbox id="e_mail" maxlength="100"
+												width="90%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>	
+				</hbox>
+				<hbox width="100%">
+					<groupbox
+						width="100%">
+						<panel width="100%">
+							<panelchildren>
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(83)}" />
+										</row>
+										<row>
+											<textbox id="school" maxlength="100"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(84)}" />
+										</row>
+										<row>
+											<textbox id="school_address" maxlength="100"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(76)}" />
+										</row>
+										<row>
+											<textbox id="school_city" maxlength="100"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(77)}" />
+										</row>
+										<row>
+											<textbox id="school_state_province" maxlength="100"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(20)}" />
+										</row>
+										<row>
+											<textbox id="school_zip" maxlength="5"
+												width="10%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(79)}" />
+										</row>
+										<row>
+											<listbox id="school_country"
+												model="@{win.nazioniEng}" rows="1" mold="select"
+												itemRenderer="luiss.it.renderers.NazioniEngRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(85)}" />
+										</row>
+										<row>
+											<textbox id="school_web_site" maxlength="100"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(86)}" />
+										</row>
+										<row>
+											<datebox id="starting_date" format="MM/yyyy" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(87)}" />
+										</row>
+										<row>
+											<datebox id="graduation_date" format="MM/yyyy" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(88)}" />
+										</row>
+										<row>
+											<datebox id="expected_graduation_date" format="MM/yyyy" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(89)}" />
+										</row>
+										<row>
+											<listbox id="type_diploma"
+												model="@{win.diplomi}" rows="1" mold="select"
+												itemRenderer="luiss.it.renderers.StringRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(90)}" tooltip="tooltip_1"/> />
+															<popup id="tooltip_1">
+																<html>
+																<![CDATA[
+																${win.getLabel(113)}
+																]]>
+																</html>
+															</popup>
+															
+										</row>
+										<row>
+											<radiogroup id="totalYear">
+												<radio label="10"/>
+												<radio label="11"/>
+												<radio label="12"/>
+												<radio label=">12"/>
+											</radiogroup>
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>					
+				<hbox width="100%">
+					<groupbox
+						width="100%">
+						<panel width="100%">
+							<panelchildren>
+								<grid width="100%">
+									<columns>
+										<column label="" width="100%" />
+									</columns>
+									<rows>
+										<row>
+											<button id="button_3" label="${win.getLabel(96)}" width="20%" onClick="win.upload(3)" />
+										</row>
+										<row id="row_3" visible="false" width="100%">
+											<div>
+												<iframe id="image_3" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<button id="button_4" label="${win.getLabel(97)}" width="20%" onClick="win.upload(4)" />
+										</row>
+										<row id="row_4" visible="false" width="100%">
+											<div>
+												<iframe id="image_4" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<button id="button_5" label="${win.getLabel(98)}" width="20%" onClick="win.upload(5)" />
+										</row>
+										<row id="row_5" visible="false" width="100%">
+											<div>
+												<iframe id="image_5" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<button id="button_6" label="${win.getLabel(99)}" width="20%" onClick="win.upload(6)" />
+										</row>
+										<row id="row_6" visible="false" width="100%">
+											<div>
+												<iframe id="image_6" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(101)}" />
+										</row>
+										<row>
+											<textbox id="altro1" maxlength="50" width="90%" />
+										</row>
+										<row>
+											<button id="button_7" label="${win.getLabel(104)}" width="20%" onClick="win.upload(7)" />
+										</row>
+										<row id="row_7" visible="false" width="100%">
+											<div>
+												<iframe id="image_7" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(102)}" />
+										</row>
+										<row>
+											<textbox id="altro2" maxlength="50" width="90%" />
+										</row>
+										<row>
+											<button id="button_8" label="${win.getLabel(105)}" width="20%" onClick="win.upload(8)" />
+										</row>
+										<row id="row_8" visible="false" width="100%">
+											<div>
+												<iframe id="image_8" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(103)}" />
+										</row>
+										<row>
+											<textbox id="altro3" maxlength="50" width="90%" />
+										</row>
+										<row>
+											<button id="button_9" label="${win.getLabel(106)}" width="20%" onClick="win.upload(9)" />
+										</row>
+										<row id="row_9" visible="false" width="100%">
+											<div>
+												<iframe id="image_9" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(92)}" />
+										</row>
+										<row>
+											<intbox id="totale" maxlength="4" width="10%" />
+										</row>
+										<row>
+											<button id="button_1" label="${win.getLabel(94)}" width="20%" onClick="win.upload(1)" />
+										</row>
+										<row id="row_1" visible="false" width="100%">
+											<div>
+												<iframe id="image_1" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(93)}" />
+										</row>
+										<row>
+											<intbox id="totale_act" maxlength="4" width="10%" />
+										</row>
+										<row>
+											<button id="button_2" label="${win.getLabel(95)}" width="20%" onClick="win.upload(2)" />
+										</row>
+										<row id="row_2" visible="false" width="100%">
+											<div>
+												<iframe id="image_2" width="100%" height="100%" />
+											</div>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(50)}" />
+										</row>
+										<row>
+											<listbox id="scelta_cds"
+												model="@{win.cds}" rows="1" mold="select"
+												itemRenderer="luiss.it.renderers.CdlsceltaRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<html>
+												<![CDATA[
+													${win.getLabel(134)}
+												]]>
+											</html>
+										</row>
+										<row>
+											<radiogroup id="privacy1">
+												<radio
+													label="Yes" />
+												<radio
+													label="No" />
+											</radiogroup>
+										</row>
+										<row>
+											<html>
+												<![CDATA[
+													${win.getLabel(128)}
+												]]>
+											</html>
+										</row>
+										<row>
+											<radiogroup id="privacy">
+												<radio id="Si"
+													label="Yes" />
+												<radio id="No"
+													label="No" />
+											</radiogroup>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(114)}" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>					
+				<div>
+					<button label="${win.getLabel(33)}" onClick="win.conferma()" />
+				</div>
+			</vlayout>
+		</div>
+
+	</window>
+</zk>

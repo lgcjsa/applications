@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-dic-2018 16.15.27 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="LGCDB_Clienti" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.LGCDB_Clienti.dao.Config" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Config">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="residenza" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Residenza" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="recapiti" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Recapiti" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="diploma" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Diploma" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="laurea" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Laurea" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="genitore" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Genitore" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="fotografia" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Fotografia" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="urlOk" optimistic-lock="true" type="string" unique="false">
+            <column name="URL_OK"/>
+        </property>
+        <property generated="never" lazy="false" name="urlKo" optimistic-lock="true" type="string" unique="false">
+            <column name="URL_KO"/>
+        </property>
+        <property generated="never" lazy="false" name="scadenzaVisibilita" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Scadenza_Visibilita"/>
+        </property>
+    </class>
+</hibernate-mapping>

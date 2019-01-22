@@ -1,0 +1,713 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:a="http://www.zkoss.org/2005/zk/annotation"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:n="xhtml">
+	<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+	<?page title="Auto Generated index.zul"?>
+	<window id="win" use="luiss.it.windows.Internazionali_EV"
+		contentStyle="overflow:auto"
+		border="noborder" width="100%">
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2" align="right">
+				<image src="./images/logo.jpg" />
+			</div>
+			<div class="col-md-5" align="center">
+				<html>
+
+					
+					<![CDATA[
+					
+						<style> h1 { color: white; text-shadow: 2px 2px 4px
+						#102282; } </style> <h1>${win.contesto.descrizione}</h1>         
+
+					]]>
+					
+					
+				</html>
+			</div>
+			<div class="col-md-1" align="center" visible="false">
+				<button class="btn btn-link" onClick="win.setLingua(1)">ITALIANO</button>
+				<button class="btn btn-link" onClick="win.setLingua(2)">ENGLISH</button>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(1)}</div>
+			<div class="col-md-5">
+				<textbox id="nome" width="100%" class="form-control" maxlength="40"
+					placeholder="${win.getLabel(1)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(2)}</div>
+			<div class="col-md-5">
+				<textbox id="cognome" width="100%" class="form-control" maxlength="40"
+					placeholder="${win.getLabel(2)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(4)}</div>
+			<div class="col-md-5">
+				<radiogroup id="sesso">
+					<radio id="uomo" label="M" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio id="donna" label="F" />
+				</radiogroup>
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(5)}</div>
+			<div class="col-md-2">
+				<datebox id="data_nascita" width="100%" placeholder="${win.getLabel(5)}"  />
+			</div>
+			<div class="col-md-1">
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+			</div>
+
+			<div class="col-md-5" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(6)}</div>
+			<div class="col-md-5">
+				<listbox height="30px" id="nas_nazione"
+					model="@{win.nazioniEng}" rows="1" mold="select"
+					onSelect="win.selezioneNazioneEng(self.getSelectedItem(),self.getId())"
+					itemRenderer="luiss.it.renderers.NazioniEngRenderer" width="100%" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(7)}</div>
+			<div class="col-md-5">
+				<listbox height="30px" id="nas_regione" model="@{win.regioni}"
+					rows="1" mold="select"
+					onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+					itemRenderer="luiss.it.renderers.RegioniRenderer" width="100%" />
+
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(8)}</div>
+			<div class="col-md-5">
+				<listbox height="30px" id="nas_provincia" model="@{win.province}"
+					rows="1" mold="select"
+					onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+					itemRenderer="luiss.it.renderers.ProvinceRenderer" width="100%" />
+
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(9)}</div>
+			<div class="col-md-5">
+				<listbox height="30px" id="nas_comune" model="@{win.comuni}" rows="1"
+					mold="select"
+					onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+					itemRenderer="luiss.it.renderers.ComuniRenderer" width="100%" />
+
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(10)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="nas_luogo" width="100%" readonly="true" maxlength="100" 
+				placeholder="${win.getLabel(10)}" />
+				
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row" visible="false">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(21)}
+			</div>
+			<div class="col-md-2">
+				<textbox id="codice_fiscale" width="100%" maxlength="16" placeholder="${win.getLabel(21)}" />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(74)}
+			</div>
+			<div class="col-md-5">
+				<listbox id="nazionalita" height="30px" 
+					model="@{win.nazioniEng}" rows="1" mold="select"
+					itemRenderer="luiss.it.renderers.NazioniEngRenderer" width="100%" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(75)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="permanent_address" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(75)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(76)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="city" width="100%" maxlength="100"
+				placeholder="${win.getLabel(76)}" />
+				
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(77)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="state_province" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(77)}" />
+				
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(20)}
+			</div>
+			<div class="col-md-1">
+				<textbox id="zip" width="100%" maxlength="5" 
+				placeholder="${win.getLabel(20)}" />
+			</div>
+			<div class="col-md-7" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(79)}
+			</div>
+			<div class="col-md-5">
+				<listbox id="country" 
+					model="@{win.nazioniEng}" rows="1" mold="select"
+					itemRenderer="luiss.it.renderers.NazioniEngRenderer" height="30px" width="100%" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(80)}
+			</div>
+			<div class="col-md-2">
+				<textbox id="telephone" width="100%" maxlength="15" 
+				placeholder="${win.getLabel(80)}" />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(81)}
+			</div>
+			<div class="col-md-2">
+				<textbox id="mobile" width="100%" maxlength="15" 
+				placeholder="${win.getLabel(81)}" />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(22)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="e_mail" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(22)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(83)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="school" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(83)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(84)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="school_address" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(84)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(76)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="school_city" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(76)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(77)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="school_state_province" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(77)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(20)}
+			</div>
+			<div class="col-md-1">
+				<textbox id="school_zip" width="100%" maxlength="5" 
+				placeholder="${win.getLabel(20)}" />
+			</div>
+			<div class="col-md-7" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(79)}
+			</div>
+			<div class="col-md-5">
+				<listbox id="school_country" 
+					model="@{win.nazioniEng}" rows="1" mold="select"
+					itemRenderer="luiss.it.renderers.NazioniEngRenderer" height="30px" width="100%" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(85)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="school_web_site" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(85)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(86)}
+			</div>
+			<div class="col-md-2">
+				<datebox id="starting_date" format="MM/yyyy" width="100%"  />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(87)}
+			</div>
+			<div class="col-md-2">
+				<datebox id="graduation_date" format="MM/yyyy" width="100%"  />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(88)}
+			</div>
+			<div class="col-md-2">
+				<datebox id="expected_graduation_date" format="MM/yyyy" width="100%"  />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(89)}
+			</div>
+			<div class="col-md-5">
+				<listbox id="type_diploma" model="@{win.diplomi}"
+					rows="1" mold="select" height="30px"
+					itemRenderer="luiss.it.renderers.StringRenderer" width="100%" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2" tooltip="tooltip_1">
+															<popup id="tooltip_1">
+																<html>
+																<![CDATA[
+																${win.getLabel(113)}
+																]]>
+																</html>
+															</popup>
+
+				${win.getLabel(90)}
+			</div>
+			<div class="col-md-5">
+				<radiogroup id="totalYear">
+					<radio label="10" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio label="11" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio label="12" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio label=">12" />
+				</radiogroup>
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_3" class="btn btn-primary btn-md" label="${win.getLabel(96)}" width="100%" onClick="win.upload(3)" />
+			</div>
+			<div class="col-md-5" id="row_3" visible="false">
+				<iframe id="image_3" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_4" class="btn btn-primary btn-md" label="${win.getLabel(97)}" width="100%" onClick="win.upload(4)" />
+			</div>
+			<div class="col-md-5" id="row_4" visible="false">
+				<iframe id="image_4" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_5" class="btn btn-primary btn-md" label="${win.getLabel(98)}" width="100%" onClick="win.upload(5)" />
+			</div>
+			<div class="col-md-5" id="row_5" visible="false">
+				<iframe id="image_5" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_6" class="btn btn-primary btn-md" label="${win.getLabel(99)}" width="100%" onClick="win.upload(6)" />
+			</div>
+			<div class="col-md-5" id="row_6" visible="false">
+				<iframe id="image_6" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(101)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="altro1" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(101)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_7" class="btn btn-primary btn-md" label="${win.getLabel(104)}" width="100%" onClick="win.upload(7)" />
+			</div>
+			<div class="col-md-5" id="row_7" visible="false">
+				<iframe id="image_7" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(102)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="altro2" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(102)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_8" class="btn btn-primary btn-md" label="${win.getLabel(105)}" width="100%" onClick="win.upload(8)" />
+			</div>
+			<div class="col-md-5" id="row_8" visible="false">
+				<iframe id="image_8" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(103)}
+			</div>
+			<div class="col-md-5">
+				<textbox id="altro3" width="100%" maxlength="100" 
+				placeholder="${win.getLabel(103)}" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_9" class="btn btn-primary btn-md" label="${win.getLabel(106)}" width="100%" onClick="win.upload(9)" />
+			</div>
+			<div class="col-md-5" id="row_9" visible="false">
+				<iframe id="image_9" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(92)}
+			</div>
+			<div class="col-md-1">
+				<intbox id="totale" maxlength="4" width="100%"
+				placeholder="${win.getLabel(92)}" />
+			</div>
+			<div class="col-md-7" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_1" class="btn btn-primary btn-md" label="${win.getLabel(94)}" width="100%" onClick="win.upload(1)" />
+			</div>
+			<div class="col-md-5" id="row_1" visible="false">
+				<iframe id="image_1" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(93)}
+			</div>
+			<div class="col-md-1">
+				<intbox id="totale_act" maxlength="4" width="100%"
+				placeholder="${win.getLabel(93)}" />
+			</div>
+			<div class="col-md-7" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				<button id="button_2" class="btn btn-primary btn-md" label="${win.getLabel(95)}" width="100%" onClick="win.upload(2)" />
+			</div>
+			<div class="col-md-5" id="row_2" visible="false">
+				<iframe id="image_2" width="100%" height="450px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(50)}
+			</div>
+			<div class="col-md-5">
+				<listbox id="scelta_cds" model="@{win.cds}" rows="1"
+					mold="select" itemRenderer="luiss.it.renderers.CdlsceltaRenderer"
+					width="100%" height="30px" />
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(178)}
+			</div>
+			<div class="col-md-1">
+				<textbox id="token" maxlength="9" width="100%"
+				placeholder="${win.getLabel(178)}" />
+			</div>
+			<div class="col-md-7" />
+		</div>		
+		<separator spacing="45px" />
+		<div class="row">
+			<div class="col-md-2" />
+
+			<div class="col-md-7">
+				<html>
+					<![CDATA[ ${win.getLabel(134)} ]]>
+				</html>
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2">
+				<radiogroup id="privacy1">
+					<radio label="${win.getLabel(147)}" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio label="${win.getLabel(148)}" />
+				</radiogroup>
+			</div>
+			<div class="col-md-8" />
+		</div>
+		<separator spacing="45px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-7">
+				<html>
+					<![CDATA[ ${win.getLabel(128)} ]]>
+				</html>
+			</div>
+			<div class="col-md-3" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2">
+				<radiogroup id="privacy">
+					<radio label="${win.getLabel(147)}" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio label="${win.getLabel(148)}" />
+				</radiogroup>
+			</div>
+			<div class="col-md-8" />
+		</div>
+		<separator spacing="45px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2">
+				${win.getLabel(114)}
+			</div>
+			<div class="col-md-8" />
+		</div>
+		<separator spacing="30px" />
+		<div class="row" align="center">
+			<div class="col-md-5" />
+			<div class="col-md-2">
+				<button width="100%" class="btn btn-primary btn-lg" onClick="win.conferma()">${win.getLabel(33)}</button>
+			</div>
+			<div class="col-md-5" />
+		</div>
+
+	</window>
+</zk>

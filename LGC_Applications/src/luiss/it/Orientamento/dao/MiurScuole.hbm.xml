@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 28-nov-2018 11.18.02 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="Orientamento" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.Orientamento.dao.MiurScuole" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="MIUR_SCUOLE">
+        <id name="idScuola" type="long">
+            <column name="ID_SCUOLA" precision="10" scale="0"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="codScuola" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="COD_SCUOLA"/>
+        </property>
+        <property generated="never" lazy="false" name="denominazione" optimistic-lock="true" type="string" unique="false">
+            <column name="DENOMINAZIONE"/>
+        </property>
+        <property generated="never" lazy="false" name="tipoScuolaMiurCod" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="TIPO_SCUOLA_MIUR_COD"/>
+        </property>
+        <property generated="never" lazy="false" name="stataleFlg" optimistic-lock="true" type="boolean" unique="false">
+            <column name="STATALE_FLG" not-null="true" precision="1" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="regione" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="REGIONE"/>
+        </property>
+        <property generated="never" lazy="false" name="prov" optimistic-lock="true" type="string" unique="false">
+            <column name="PROV"/>
+        </property>
+        <property generated="never" lazy="false" name="comune" optimistic-lock="true" type="string" unique="false">
+            <column name="COMUNE"/>
+        </property>
+        <property generated="never" lazy="false" name="codIstatMiur" optimistic-lock="true" type="string" unique="false">
+            <column length="6" name="COD_ISTAT_MIUR" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="cap" optimistic-lock="true" type="string" unique="false">
+            <column length="5" name="CAP"/>
+        </property>
+        <property generated="never" lazy="false" name="indirizzo" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="INDIRIZZO"/>
+        </property>
+        <property generated="never" lazy="false" name="telefono" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="TELEFONO"/>
+        </property>
+        <property generated="never" lazy="false" name="statoCaric" optimistic-lock="true" type="boolean" unique="false">
+            <column name="STATO_CARIC" not-null="true" precision="1" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="dataCaric" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="DATA_CARIC"/>
+        </property>
+        <property generated="never" lazy="false" name="livelloFunzionale" optimistic-lock="true" type="string" unique="false">
+            <column name="LIVELLO_FUNZIONALE"/>
+        </property>
+        <property generated="never" lazy="false" name="codiceScuolaRiferimento" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="CODICE_SCUOLA_RIFERIMENTO"/>
+        </property>
+        <property generated="never" lazy="false" name="tipologia" optimistic-lock="true" type="string" unique="false">
+            <column name="TIPOLOGIA"/>
+        </property>
+        <property generated="never" lazy="false" name="tipologiaSede" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="TIPOLOGIA_SEDE"/>
+        </property>
+        <property generated="never" lazy="false" name="parita" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PARITA"/>
+        </property>
+        <property generated="never" lazy="false" name="targa" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="TARGA"/>
+        </property>
+    </class>
+</hibernate-mapping>

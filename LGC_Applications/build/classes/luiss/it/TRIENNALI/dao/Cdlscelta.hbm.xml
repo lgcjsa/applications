@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 29-nov-2018 18.33.34 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="TRIENNALI" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.TRIENNALI.dao.Cdlscelta" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="CDLScelta">
+        <composite-id class="luiss.it.TRIENNALI.dao.CdlsceltaId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="fac" type="string">
+                <column length="1" name="Facolta"/>
+            </key-property>
+            <key-property name="cds" type="string">
+                <column length="2" name="CorsoDiLaurea"/>
+            </key-property>
+        </composite-id>
+        <property generated="never" lazy="false" name="descrizione" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Descrizione" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="selezionabile" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Selezionabile" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

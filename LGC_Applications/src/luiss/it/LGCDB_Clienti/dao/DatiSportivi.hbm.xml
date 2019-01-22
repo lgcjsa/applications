@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-dic-2018 16.15.27 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="LGCDB_Clienti" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.LGCDB_Clienti.dao.DatiSportivi" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Dati_Sportivi">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="idDisciplineSportive" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_Discipline_Sportive"/>
+        </property>
+        <property generated="never" lazy="false" name="idLivelliSportivi" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_Livelli_Sportivi"/>
+        </property>
+        <property generated="never" lazy="false" name="societaDiAppertenenza" optimistic-lock="true" type="string" unique="false">
+            <column name="Societa_Di_Appertenenza"/>
+        </property>
+        <property generated="never" lazy="false" name="annoInizioAgonismo" optimistic-lock="true" type="integer" unique="false">
+            <column name="Anno_Inizio_Agonismo"/>
+        </property>
+        <property generated="never" lazy="false" name="idPersone" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_Persone"/>
+        </property>
+        <property generated="never" lazy="false" name="letteraMotivazionale" optimistic-lock="true" type="string" unique="false">
+            <column name="Lettera_Motivazionale"/>
+        </property>
+        <property generated="never" lazy="false" name="letteraReferenziale" optimistic-lock="true" type="string" unique="false">
+            <column name="Lettera_Referenziale"/>
+        </property>
+        <property generated="never" lazy="false" name="dataInsert" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_INSERT"/>
+        </property>
+        <property generated="never" lazy="false" name="dataUpdate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_UPDATE"/>
+        </property>
+    </class>
+</hibernate-mapping>

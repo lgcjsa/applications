@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-dic-2018 16.15.27 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="LGCDB_Clienti" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.LGCDB_Clienti.dao.RisultatiSportivi" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Risultati_Sportivi">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="medaglia" optimistic-lock="true" type="string" unique="false">
+            <column length="7" name="Medaglia"/>
+        </property>
+        <property generated="never" lazy="false" name="descrizione" optimistic-lock="true" type="string" unique="false">
+            <column name="Descrizione"/>
+        </property>
+        <property generated="never" lazy="false" name="idDatiSportivi" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_Dati_sportivi"/>
+        </property>
+        <property generated="never" lazy="false" name="dataInsert" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_INSERT"/>
+        </property>
+        <property generated="never" lazy="false" name="dataUpdate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_UPDATE"/>
+        </property>
+    </class>
+</hibernate-mapping>

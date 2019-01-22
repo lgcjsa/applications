@@ -1,0 +1,469 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:a="http://www.zkoss.org/2005/zk/annotation"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:n="xhtml">
+	<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+	<?page title="Auto Generated index.zul"?>
+	<window id="win" use="luiss.it.windows.Sport" border="noborder"
+		contentStyle="overflow:auto" width="100%">
+		<div align="right">
+
+			<a onClick="win.setLingua(1)">
+				<image
+					src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/flags/1x1/it.svg"
+					width="5%" height="25px" />
+			</a>
+			<a onClick="win.setLingua(2)">
+				<image
+					src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/flags/1x1/gb.svg"
+					width="5%" height="25px" />
+			</a>
+
+		</div>
+		<div align="center">
+			<div align="left" width="60%">
+				<image src="./images/logo.jpg" />
+			</div>
+			<div align="center" width="70%">
+				<label value="${win.contesto.descrizione}"
+					style="font-size: 27px;" width="95%" />
+			</div>
+		<zscript><![CDATA[
+		                  
+			win.setPagina("sport.zul")                  
+		                  
+		]]></zscript>                  
+			<div height="10px" />
+			<vlayout id="myLayout" width="70%">
+				<hbox>
+					<groupbox title="${win.getLabel(3)}" mold="3d"
+						width="95%">
+						<panel width="99%">
+							<panelchildren style="padding:5px;">
+								<grid width="98%">
+									<columns>
+										<column label="" width="95%" />  
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(1)}" />
+										</row>
+										<row>
+
+											<textbox id="nome"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(2)}" />
+										</row>
+										<row>
+
+											<textbox id="cognome"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(4)}" />
+										</row>
+										<row>
+											<radiogroup id="sesso">
+												<radio id="uomo"
+													label="M" />
+												<radio id="donna"
+													label="F" />
+											</radiogroup>
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(5)}" />
+										</row>
+										<row>
+											<datebox id="data_nascita" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(6)}" />
+										</row>
+										<row>
+											<listbox id="nas_nazione"
+												model="@{win.nazioni}" rows="1" mold="select"
+												onSelect="win.selezioneNazione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.NazioniRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(7)}" />
+										</row>
+										<row>
+											<listbox id="nas_regione"
+												model="@{win.regioni}" rows="1" mold="select"
+												onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.RegioniRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(8)}" />
+										</row>
+										<row>
+											<listbox id="nas_provincia"
+												model="@{win.province}" rows="1" mold="select"
+												onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ProvinceRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(9)}" />
+										</row>
+										<row>
+											<listbox id="nas_comune"
+												model="@{win.comuni}" rows="1" mold="select"
+												onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ComuniRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(10)}" />
+										</row>
+										<row>
+											<textbox id="nas_luogo"
+												width="90%" readonly="true" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(21)}" />
+										</row>
+										
+										<row>
+											<textbox id="codice_fiscale"  maxlength="16"
+												width="30%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="${win.visibilitaFotografia}">
+					<groupbox title="${win.getLabel(60)}" mold="3d"
+						width="95%">
+						<panel width="99%">
+							<panelchildren style="padding:5px;">
+								<grid width="98%">
+									<columns>
+										<column label="" width="95%" />
+									</columns>
+									<rows>
+										<row>
+											<button label="${win.getLabel(58)}" onClick="win.uploadFotografia()" />
+										</row>
+										<row>
+											<image id="fotografia" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="${win.visibilitaResidenza}">
+					<groupbox title="${win.getLabel(12)}" mold="3d"
+						width="95%">
+						<panel width="99%">
+							<panelchildren style="padding:5px;">
+								<grid width="98%">
+									<columns>
+										<column label="" width="95%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(13)}" />
+										</row>
+										<row>
+											<listbox id="res_nazione"
+												model="@{win.nazioni}" rows="1" mold="select"
+												onSelect="win.selezioneNazione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.NazioniRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(14)}" />
+										</row>
+										<row>
+											<listbox id="res_regione"
+												model="@{win.regioni}" rows="1" mold="select"
+												onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.RegioniRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(15)}" />
+										</row>
+										<row>
+											<listbox id="res_provincia"
+												model="@{win.province}" rows="1" mold="select"
+												onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ProvinceRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(16)}" />
+										</row>
+										<row>
+											<listbox id="res_comune"
+												model="@{win.comuni}" rows="1" mold="select"
+												onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+												itemRenderer="luiss.it.renderers.ComuniRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(17)}" />
+										</row>
+										<row>
+											<textbox id="res_luogo"
+												width="90%" readonly="true" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(18)}" />
+										</row>
+										<row>
+											<textbox id="res_indirizzo"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(19)}" />
+										</row>
+										<row>
+											<textbox id="res_civico"
+												width="10%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(20)}" />
+										</row>
+										<row>
+											<textbox id="res_cap"
+												width="10%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="${win.visibilitaRecapiti}">
+					<groupbox title="${win.getLabel(11)}" mold="3d"
+						width="95%">
+						<panel width="99%">
+							<panelchildren style="padding:5px;">
+								<grid width="98%">
+									<columns>
+										<column label="" width="95%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(22)}" />
+										</row>
+										<row>
+											<textbox id="email"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(23)}" />
+										</row>
+										<row>
+											<textbox id="telefono"
+												width="20%" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="true">
+					<groupbox title="${win.getLabel(34)}" mold="3d"
+						width="95%">
+						<panel width="99%">
+							<panelchildren style="padding:5px;">
+								<grid width="98%">
+									<columns>
+										<column label="" width="95%" />
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(40)}" />
+										</row>
+										<row>
+											<listbox id="sport"
+												model="@{win.sports}" rows="1" mold="select" onSelect=""
+												itemRenderer="luiss.it.renderers.SportsRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(41)}" />
+										</row>
+										<row>
+											<listbox id="livello"
+												model="@{win.livelli}" rows="1" mold="select" onSelect=""
+												itemRenderer="luiss.it.renderers.LivelliRenderer"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(42)}" />
+										</row>
+										<row>
+											<textbox id="societa"
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(43)}" />
+										</row>
+										<row>
+											<intbox
+												id="anno_inizio_agonismo" width="10%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(44)}" />
+										</row>
+										<row>
+											<textbox
+												id="lettera_motivazionale" width="90%" rows="5" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(45)}" />
+										</row>
+										<row>
+											<textbox
+												id="lettera_referenziale" width="90%" rows="5" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(46)}" />
+										</row>
+										<row>
+											<listbox id="medagliere"
+												model="@{win.risultati}"
+												itemRenderer="luiss.it.renderers.RisultatiSportiviRenderer"
+												width="90%">
+												<listhead>
+													<listheader
+														label="${win.getLabel(61)}" width="30%" />
+													<listheader
+														label="${win.getLabel(62)}" width="70%" />
+												</listhead>
+											</listbox>
+										</row>
+										<row>
+											<div>
+												<listbox id="medaglia"
+													model="@{win.medaglie}" rows="1" mold="select" onSelect=""
+													itemRenderer="luiss.it.renderers.StringRenderer"
+													width="25%" />
+												<textbox
+													id="des_medaglia" width="60%" />
+											</div>
+										</row>
+										<row>
+											<div>
+												<button label="+"
+													onClick="win.add()" />
+												<button label="-"
+													onClick="win.delete()" />
+											</div>
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<hbox visible="true">
+					<groupbox title="${win.getLabel(49)}" mold="3d"
+						width="95%">
+						<panel width="99%">
+							<panelchildren style="padding:5px;">
+								<grid width="98%">
+									<columns>
+										<column label="" width="95%" />  
+									</columns>
+									<rows>
+										<row>
+											<label
+												value="${win.getLabel(50)}" />
+										</row>
+										<row>
+											<listbox id="cds"
+												model="@{win.cds}" rows="1" mold="select" onSelect=""
+												itemRenderer="luiss.it.renderers.CdsRenderer" 
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(51)}" />
+										</row>
+										<row>
+											<textbox id="matricola_luiss"
+												width="10%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(55)}" />
+										</row>
+										<row>
+											<listbox id="anno_accademico"
+												model="@{win.anniAccademici}" rows="1" mold="select" onSelect=""
+												itemRenderer="luiss.it.renderers.AnniAccademiciRenderer" 
+												width="90%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(56)}" />
+										</row>
+										<row>
+											<intbox id="anno_corso"
+												width="10%" />
+										</row>
+										<row>
+											<label
+												value="${win.getLabel(57)}" />
+										</row>
+										<row>
+											<textbox
+												id="note" width="90%" rows="5" />
+										</row>
+									</rows>
+								</grid>
+							</panelchildren>
+						</panel>
+					</groupbox>
+				</hbox>
+				<div>
+					<button label="${win.getLabel(33)}" onClick="win.conferma()" />
+				</div>
+			</vlayout>
+		</div>
+
+	</window>
+</zk>

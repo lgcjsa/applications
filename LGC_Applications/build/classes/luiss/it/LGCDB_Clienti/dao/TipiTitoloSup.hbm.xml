@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-dic-2018 16.15.27 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="LGCDB_Clienti" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.LGCDB_Clienti.dao.TipiTitoloSup" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="TIPI_TITOLO_SUP">
+        <id name="tipoTitoloCod" type="string">
+            <column length="10" name="TIPO_TITOLO_COD"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="idMacroTipo" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_MACRO_TIPO"/>
+        </property>
+        <property generated="never" lazy="false" name="idTipoIst" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_TIPO_IST"/>
+        </property>
+        <property generated="never" lazy="false" name="idTitolo" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_TITOLO"/>
+        </property>
+        <property generated="never" lazy="false" name="tipologiaCod" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="TIPOLOGIA_COD"/>
+        </property>
+        <property generated="never" lazy="false" name="des" optimistic-lock="true" type="string" unique="false">
+            <column name="DES"/>
+        </property>
+        <property generated="never" lazy="false" name="sysFlg" optimistic-lock="true" type="integer" unique="false">
+            <column name="SYS_FLG"/>
+        </property>
+        <property generated="never" lazy="false" name="idDiploma" optimistic-lock="true" type="integer" unique="false">
+            <column name="ID_DIPLOMA"/>
+        </property>
+        <property generated="never" lazy="false" name="almaCod" optimistic-lock="true" type="integer" unique="false">
+            <column name="ALMA_COD"/>
+        </property>
+        <property generated="never" lazy="false" name="annoIntFlg" optimistic-lock="true" type="integer" unique="false">
+            <column name="ANNO_INT_FLG"/>
+        </property>
+        <property generated="never" lazy="false" name="abilVisFlg" optimistic-lock="true" type="integer" unique="false">
+            <column name="ABIL_VIS_FLG"/>
+        </property>
+    </class>
+</hibernate-mapping>

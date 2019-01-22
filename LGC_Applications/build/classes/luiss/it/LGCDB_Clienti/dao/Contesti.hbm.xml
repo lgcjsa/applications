@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-dic-2018 16.15.27 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="LGCDB_Clienti" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.LGCDB_Clienti.dao.Contesti" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Contesti">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="codice" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="Codice" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="descrizione" optimistic-lock="true" type="string" unique="false">
+            <column name="Descrizione"/>
+        </property>
+        <property generated="never" lazy="false" name="note" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="Note"/>
+        </property>
+    </class>
+</hibernate-mapping>

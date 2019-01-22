@@ -1,0 +1,88 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:a="http://www.zkoss.org/2005/zk/annotation"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:n="xhtml">
+	<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+	<?page title="Auto Generated index.zul"?>
+
+
+	<window id="win" use="luiss.it.windows.Index" border="false"
+		contentStyle="overflow:auto" width="100%">
+		<div class="row">
+			<div class="col-md-2">
+				<image src="./images/logo.jpg" />
+			</div>
+			<div align="center" class="col-md-8">
+				<html>
+
+					
+					<![CDATA[
+
+					<style> h1 { color: white; text-shadow: 2px 2px 4px
+					#000000; } </style> <h1>${win.getLabel(115)}</h1>
+
+					]]>
+					
+					
+				</html>
+
+			</div>
+
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="33px" />
+
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(1)}</div>
+			<div class="col-md-6">
+				<textbox width="95%" class="form-control"
+					placeholder="${win.getLabel(1)}" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(2)}</div>
+			<div class="col-md-6">
+				<textbox width="95%" class="form-control"
+					placeholder="${win.getLabel(2)}" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(5)}</div>
+			<div class="col-md-2">
+				<datebox width="95%" />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(4)}</div>
+			<div class="col-md-6">
+				<radiogroup id="sesso">
+					<radio id="uomo" label="M" />
+					<radio id="donna" label="F" />
+				</radiogroup>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-5" />
+			<div class="col-md-2">
+				<button width="100%" label="${win.getLabel(33)}" class="btn btn-outline-primary btn-block" />
+			</div>
+			<div class="col-md-5" />
+		</div>
+
+
+	</window>
+
+</zk>

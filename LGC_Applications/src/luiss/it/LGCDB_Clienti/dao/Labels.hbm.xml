@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-dic-2018 16.15.27 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="LGCDB_Clienti" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.LGCDB_Clienti.dao.Labels" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Labels">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="lingueCodice" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="Lingue_Codice"/>
+        </property>
+        <property generated="never" lazy="false" name="codiceLabel" optimistic-lock="true" type="integer" unique="false">
+            <column name="Codice_Label"/>
+        </property>
+        <property generated="never" lazy="false" name="label" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="Label"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,407 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:a="http://www.zkoss.org/2005/zk/annotation"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:n="xhtml">
+	<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+	<?page title="Auto Generated index.zul"?>
+
+	<window id="win" use="luiss.it.windows.GO" border="noborder"
+		contentStyle="overflow:auto" width="100%">
+		<zscript><![CDATA[
+		                  
+			win.setPagina("giornate_go.zul")                  
+		                  
+		]]></zscript>                  
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2" align="right">
+				<image src="./images/logo.jpg" />
+			</div>
+			<div class="col-md-6" align="center">
+				<html>
+
+					
+					<![CDATA[
+
+					<style> h1 { color: white; text-shadow: 2px 2px 4px
+					#102282; } </style> <h1>${win.contesto.descrizione}</h1>
+
+					]]>
+					
+					
+				</html>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="33px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(1)}</div>
+			<div class="col-md-6">
+				<textbox id="nome" width="100%" class="form-control"
+					placeholder="${win.getLabel(1)}" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(2)}</div>
+			<div class="col-md-6">
+				<textbox id="cognome" width="100%" class="form-control"
+					placeholder="${win.getLabel(2)}" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(4)}</div>
+			<div class="col-md-6">
+				<radiogroup id="sesso">
+					<radio id="uomo" label="M" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio id="donna" label="F" />
+				</radiogroup>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(5)}</div>
+			<div class="col-md-2">
+				<datebox id="data_nascita" width="100%" />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(6)}</div>
+			<div class="col-md-6">
+				<listbox id="nas_nazione" model="@{win.nazioni}"
+					rows="1" mold="select"
+					onSelect="win.selezioneNazione(self.getSelectedItem(),self.getId())"
+					itemRenderer="luiss.it.renderers.NazioniRenderer" width="100%" />
+
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(7)}</div>
+			<div class="col-md-6">
+				<listbox id="nas_regione" model="@{win.regioni}"
+					rows="1" mold="select"
+					onSelect="win.selezioneRegione(self.getSelectedItem(),self.getId())"
+					itemRenderer="luiss.it.renderers.RegioniRenderer" width="100%" />
+
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(8)}</div>
+			<div class="col-md-6">
+				<listbox id="nas_provincia" model="@{win.province}"
+					rows="1" mold="select"
+					onSelect="win.selezioneProvincia(self.getSelectedItem(),self.getId())"
+					itemRenderer="luiss.it.renderers.ProvinceRenderer" width="100%" />
+
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(9)}</div>
+			<div class="col-md-6">
+				<listbox id="nas_comune" model="@{win.comuni}" rows="1"
+					mold="select"
+					onSelect="win.selezioneComune(self.getSelectedItem(),self.getId())"
+					itemRenderer="luiss.it.renderers.ComuniRenderer" width="100%" />
+
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(10)}
+			</div>
+			<div class="col-md-6">
+				<textbox id="nas_luogo" width="100%" readonly="true" 
+				placeholder="${win.getLabel(10)}" />
+				
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row" visible="false">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(21)}
+			</div>
+			<div class="col-md-6">
+				<textbox id="codice_fiscale" width="100%" readonly="true" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(22)}</div>
+			<div class="col-md-6">
+				<textbox id="email" width="100%" class="form-control"
+					placeholder="${win.getLabel(22)}" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(23)}</div>
+			<div class="col-md-2">
+				<textbox id="telefono" width="100%" class="form-control"
+					placeholder="${win.getLabel(23)}" />
+			</div>
+			<div class="col-md-6" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(142)}</div>
+			<div class="col-md-6">
+				<listbox id="regioni_scuole" model="@{win.regioni_scuole}" rows="1"
+					mold="select"
+					onSelect="win.selezioneRegioneScuola(self.getSelectedItem())"
+					itemRenderer="luiss.it.renderers.StringRenderer" width="100%" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(143)}</div>
+			<div class="col-md-6">
+				<listbox id="province_scuole" model="@{win.province_scuole}" rows="1"
+					mold="select"
+					onSelect="win.selezioneProvinciaScuola(self.getSelectedItem())"
+					itemRenderer="luiss.it.renderers.StringRenderer" width="100%" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(144)}</div>
+			<div class="col-md-6">
+				<listbox id="comuni_scuole" model="@{win.comuni_scuole}" rows="1"
+					mold="select"
+					onSelect="win.selezioneComuneScuola(self.getSelectedItem())"
+					itemRenderer="luiss.it.renderers.StringRenderer" width="100%" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(145)}</div>
+			<div class="col-md-6">
+				<listbox id="tipi_scuole" model="@{win.tipi_scuole}" rows="1"
+					mold="select"
+					onSelect="win.selezioneTipoScuola(self.getSelectedItem())"
+					itemRenderer="luiss.it.renderers.MiurTipiScuoleRenderer" width="100%" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(25)}</div>
+			<div class="col-md-6">
+				<listbox id="scuole" model="@{win.scuole_miur}" rows="1"
+					mold="select"
+					onSelect="win.selezioneScuola(self.getSelectedItem())"
+					itemRenderer="luiss.it.renderers.MiurScuoleRenderer" width="100%" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				
+			</div>
+			<div class="col-md-6">
+				<textbox id="des_scuola" width="100%" readonly="true" 
+				placeholder="${win.getLabel(25)}" />
+				
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(137)}</div>
+			<div class="col-md-6">
+				<radiogroup id="anno">
+					<radio label="${win.getLabel(138)}" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>         
+					<radio label="${win.getLabel(139)}" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>         
+					<radio label="${win.getLabel(140)}" />
+				</radiogroup>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">
+				${win.getLabel(141)}
+			</div>
+			<div class="col-md-6">
+				<checkbox id="EM" label="Economia e management" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2" />
+			<div class="col-md-6">
+				<checkbox id="CS"
+					label="Management and Computer Science" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2" />
+			<div class="col-md-6">
+				<checkbox id="EB" label="Economics and Business" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2" />
+			<div class="col-md-6">
+				<checkbox id="SP" label="Scienze Politiche" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2" />
+			<div class="col-md-6">
+				<checkbox id="GP" label="Giurisprudenza" />
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div align="right" class="col-md-2">${win.getLabel(136)}</div>
+			<div class="col-md-6">
+				<listbox id="date_go" model="@{win.giornate}" rows="1"
+					mold="select"
+					onSelect=""
+					itemRenderer="luiss.it.renderers.PeriodiGoRenderer" width="100%" />
+
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="45px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2" />
+			<div class="col-md-6">
+				<html>
+					
+					<![CDATA[ ${win.getLabel(146)} ]]>
+					
+					</html>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2" />
+			<div class="col-md-6">
+				<radiogroup id="privacy1">
+					<radio label="${win.getLabel(147)}" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio label="${win.getLabel(148)}" />
+				</radiogroup>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="45px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2" />
+			<div class="col-md-6">
+				<html>
+					
+					<![CDATA[ ${win.getLabel(149)} ]]>
+					
+					</html>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="15px" />
+		<div class="row">
+			<div class="col-md-2" />
+			<div class="col-md-2" />
+			<div class="col-md-6">
+				<radiogroup id="privacy">
+					<radio label="${win.getLabel(147)}" />
+					<html>
+					<![CDATA[
+						&nbsp;&nbsp;&nbsp;
+					]]>
+					</html>
+					<radio label="${win.getLabel(148)}" />
+				</radiogroup>
+			</div>
+			<div class="col-md-2" />
+		</div>
+		<separator spacing="30px" />
+		<div class="row" align="center">
+			<div class="col-md-5" />
+			<div class="col-md-2">
+				<button width="100%" class="btn btn-primary btn-lg" onClick="win.conferma()">${win.getLabel(33)}</button>
+			</div>
+			<div class="col-md-5" />
+		</div>
+		<separator spacing="15px" />
+
+	</window>
+</zk>

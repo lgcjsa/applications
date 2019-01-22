@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="TRIENNALI" match-name="Diplomi" />
+	<table-filter match-name="CDLScelta" match-catalog="TRIENNALI"></table-filter>
+	<table catalog="TRIENNALI" name="Diplomi">
+		<column name="DiplomaID" type="string"></column>
+		<column name="Denominazione" type="string"></column>
+		<column name="DenomMIUR" type="string"></column>
+	</table>
+	<table catalog="TRIENNALI" name="CDLScelta">
+		<primary-key>
+			<key-column name="Facolta" type="string" property="fac" />
+			<key-column name="CorsoDiLaurea" type="string"
+				property="cds" />
+		</primary-key>
+		<column name="Descrizione" type="string"></column>
+		<column name="Selezionabile" type="string"></column>
+	</table>
+
+</hibernate-reverse-engineering>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="Orientamento" match-name="Periodi_GO" />
+	<table-filter match-name="MIUR_SCUOLE"
+		match-catalog="Orientamento">
+	</table-filter>
+	<table-filter match-name="MIUR_TIPI_SCUOLE"
+		match-catalog="Orientamento">
+	</table-filter>
+	<table-filter match-name="GO" match-catalog="Orientamento"></table-filter>
+	<table-filter match-name="Dipartimenti_Scelte_GO"
+		match-catalog="Orientamento">
+	</table-filter>
+	<table catalog="Orientamento" name="Periodi_GO">
+		<column name="ID" type="integer"></column>
+		<column name="Descrizione" type="string"></column>
+		<column name="Visibile" type="string"></column>
+		<column name="Giorno" type="date"></column>
+	</table>
+	<table catalog="Orientamento" name="MIUR_SCUOLE">
+		<column name="ID_SCUOLA" type="long"></column>
+		<column name="COD_SCUOLA" type="string"></column>
+		<column name="DENOMINAZIONE" type="string"></column>
+		<column name="TIPO_SCUOLA_MIUR_COD" type="string"></column>
+		<column name="STATALE_FLG" type="boolean"></column>
+		<column name="REGIONE" type="string"></column>
+		<column name="PROV" type="string"></column>
+		<column name="COMUNE" type="string"></column>
+		<column name="COD_ISTAT_MIUR" type="string"></column>
+		<column name="CAP" type="string"></column>
+		<column name="INDIRIZZO" type="string"></column>
+		<column name="TELEFONO" type="string"></column>
+		<column name="STATO_CARIC" type="boolean"></column>
+		<column name="DATA_CARIC" type="timestamp"></column>
+		<column name="LIVELLO_FUNZIONALE" type="string"></column>
+		<column name="CODICE_SCUOLA_RIFERIMENTO" type="string"></column>
+		<column name="TIPOLOGIA" type="string"></column>
+		<column name="TIPOLOGIA_SEDE" type="string"></column>
+		<column name="PARITA" type="string"></column>
+		<column name="TARGA" type="string"></column>
+	</table>
+	<table catalog="Orientamento" name="MIUR_TIPI_SCUOLE">
+		<column name="TIPO_SCUOLA_COD" type="string"></column>
+		<column name="DES" type="string"></column>
+		<column name="STATO_CARIC" type="boolean"></column>
+		<column name="DATA_CARIC" type="timestamp"></column>
+	</table>
+	<table catalog="Orientamento" name="GO">
+		<column name="ID" type="int"></column>
+		<column name="Cognome" type="string"></column>
+		<column name="Nome" type="string"></column>
+		<column name="Codice_Fiscale" type="string"></column>
+		<column name="Data_Nascita" type="date"></column>
+		<column name="Sesso" type="string"></column>
+		<column name="Comune_Nascita" type="int"></column>
+		<column name="Telefono" type="string"></column>
+		<column name="Cellulare" type="string"></column>
+		<column name="Email" type="string"></column>
+		<column name="ID_SCUOLE" type="long"></column>
+		<column name="Scuola_Denominazione" type="string"></column>
+		<column name="Scuola_Comune" type="string"></column>
+		<column name="Scuola_Indirizzo" type="string"></column>
+		<column name="Scuola_CAP" type="string"></column>
+		<column name="Scuola_Provincia" type="string"></column>
+		<column name="TIPO_SCUOLA_COD" type="string"></column>
+		<column name="Anno_frequenza" type="string"></column>
+		<column name="Presente" type="string"></column>
+		<column name="ID_Periodi_GO" type="int"></column>
+		<column name="Data_Insert" type="timestamp"></column>
+		<column name="User_Insert" type="string"></column>
+		<column name="Data_Update" type="timestamp"></column>
+		<column name="User_Update" type="string"></column>
+		<column name="Privacy" type="string"></column>
+		<column name="Luogo_Nascita" type="string"></column>
+	</table>
+	<table catalog="Orientamento" name="Dipartimenti_Scelte_GO">
+		<column name="ID" type="int"></column>
+		<column name="ID_GO" type="int"></column>
+		<column name="Dipartimento" type="string"></column>
+	</table>
+
+</hibernate-reverse-engineering>

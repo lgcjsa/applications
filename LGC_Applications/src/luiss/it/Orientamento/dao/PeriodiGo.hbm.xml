@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 28-nov-2018 11.18.02 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="Orientamento" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.Orientamento.dao.PeriodiGo" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Periodi_GO">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="descrizione" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="Descrizione" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="giorno" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="Giorno"/>
+        </property>
+        <property generated="never" lazy="false" name="visibile" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="Visibile"/>
+        </property>
+    </class>
+</hibernate-mapping>

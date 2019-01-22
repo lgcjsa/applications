@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15-nov-2018 17.05.56 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="MAGISTRALI_INT" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.MAGISTRALI_INT.dao.Cdlscelta" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="CDLScelta">
+        <composite-id class="luiss.it.MAGISTRALI_INT.dao.CdlsceltaId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="fac" type="string">
+                <column length="1" name="Facolta"/>
+            </key-property>
+            <key-property name="cds" type="string">
+                <column length="2" name="CorsoDiLaurea"/>
+            </key-property>
+            <key-property name="ind" type="string">
+                <column length="2" name="Indirizzo"/>
+            </key-property>
+        </composite-id>
+        <property generated="never" lazy="false" name="descrizione" optimistic-lock="true" type="string" unique="false">
+            <column name="Descrizione" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="selezionabile" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Selezionabile" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

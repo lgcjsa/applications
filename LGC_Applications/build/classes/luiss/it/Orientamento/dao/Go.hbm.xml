@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 28-nov-2018 11.18.02 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="Orientamento" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.Orientamento.dao.Go" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="GO">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="cognome" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Cognome"/>
+        </property>
+        <property generated="never" lazy="false" name="nome" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Nome"/>
+        </property>
+        <property generated="never" lazy="false" name="codiceFiscale" optimistic-lock="true" type="string" unique="false">
+            <column length="16" name="Codice_Fiscale"/>
+        </property>
+        <property generated="never" lazy="false" name="dataNascita" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="Data_Nascita"/>
+        </property>
+        <property generated="never" lazy="false" name="sesso" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="Sesso"/>
+        </property>
+        <property generated="never" lazy="false" name="comuneNascita" optimistic-lock="true" type="int" unique="false">
+            <column name="Comune_Nascita"/>
+        </property>
+        <property generated="never" lazy="false" name="telefono" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="Telefono"/>
+        </property>
+        <property generated="never" lazy="false" name="cellulare" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="Cellulare"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="Email"/>
+        </property>
+        <property generated="never" lazy="false" name="idScuole" optimistic-lock="true" type="long" unique="false">
+            <column name="ID_SCUOLE" precision="10" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="scuolaDenominazione" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="Scuola_Denominazione"/>
+        </property>
+        <property generated="never" lazy="false" name="scuolaComune" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="Scuola_Comune"/>
+        </property>
+        <property generated="never" lazy="false" name="scuolaIndirizzo" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="Scuola_Indirizzo"/>
+        </property>
+        <property generated="never" lazy="false" name="scuolaCap" optimistic-lock="true" type="string" unique="false">
+            <column length="5" name="Scuola_CAP"/>
+        </property>
+        <property generated="never" lazy="false" name="scuolaProvincia" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="Scuola_Provincia"/>
+        </property>
+        <property generated="never" lazy="false" name="tipoScuolaCod" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="TIPO_SCUOLA_COD"/>
+        </property>
+        <property generated="never" lazy="false" name="annoFrequenza" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="Anno_frequenza"/>
+        </property>
+        <property generated="never" lazy="false" name="presente" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="Presente"/>
+        </property>
+        <property generated="never" lazy="false" name="idPeriodiGo" optimistic-lock="true" type="int" unique="false">
+            <column name="ID_Periodi_GO"/>
+        </property>
+        <property generated="never" lazy="false" name="dataInsert" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_Insert"/>
+        </property>
+        <property generated="never" lazy="false" name="userInsert" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="User_Insert"/>
+        </property>
+        <property generated="never" lazy="false" name="dataUpdate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_Update"/>
+        </property>
+        <property generated="never" lazy="false" name="userUpdate" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="User_Update"/>
+        </property>
+        <property generated="never" lazy="false" name="privacy" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Privacy"/>
+        </property>
+        <property generated="never" lazy="false" name="luogoNascita" optimistic-lock="true" type="string" unique="false">
+            <column name="Luogo_Nascita"/>
+        </property>
+    </class>
+</hibernate-mapping>

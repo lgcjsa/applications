@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-dic-2018 16.15.27 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="LGCDB_Clienti" dynamic-insert="false" dynamic-update="false" mutable="true" name="luiss.it.LGCDB_Clienti.dao.Persone" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Persone">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="codiceFiscale" optimistic-lock="true" type="string" unique="false">
+            <column length="16" name="Codice_Fiscale" not-null="true" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="cognome" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Cognome" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="nome" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Nome" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="sesso" optimistic-lock="true" type="string" unique="false">
+            <column length="1" name="Sesso" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="dataNascita" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="Data_Nascita" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="codiceCatastaleLuogoNascita" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="Codice_Catastale_Luogo_Nascita" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="luogoNascita" optimistic-lock="true" type="string" unique="false">
+            <column name="Luogo_Nascita" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="codiceCatastaleNazioneNascita" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="Codice_Catastale_Nazione_Nascita" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="nazioneNascita" optimistic-lock="true" type="string" unique="false">
+            <column name="Nazione_Nascita" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="dataInsert" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_INSERT"/>
+        </property>
+        <property generated="never" lazy="false" name="dataUpdate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="Data_UPDATE"/>
+        </property>
+    </class>
+</hibernate-mapping>

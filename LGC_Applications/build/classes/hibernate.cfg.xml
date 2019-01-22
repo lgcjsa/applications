@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- <property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property> -->
+		<property name="hibernate.connection.url">jdbc:mysql://172.20.5.70/LGCDB_Clienti</property>
+		<property name="hibernate.connection.username">mmuru</property>
+		<property name="hibernate.connection.password">04340Max!</property>
+		<property name="hibernate.show_sql">false</property> 
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        <property name="hibernate.connection.zeroDateTimeBehavior">convertToNull</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+        <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.idle_test_period">3600</property>
+        <property name="hibernate.c3p0.timeout">28800</property>        
+        
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Comuni.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Province.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Regioni.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Nazioni.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Continenti.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Labels.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Lingue.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Contesti.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Config.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/MiurScuole.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/MiurTipiScuole.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/TipiTitoloSup.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/DisciplineSportive.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/LivelliSportivi.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Cds.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/AnniAccademici.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Persone.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Indirizzi.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Telefoni.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Emails.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/RisultatiSportivi.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/DatiSportivi.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/DatiAccademici.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Fotografie.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Controlli.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Log.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Sedi.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/NazioniEng.hbm.xml" />
+		<mapping resource="luiss/it/LGCDB_Clienti/dao/Tokens.hbm.xml" />
+		
+	</session-factory>
+</hibernate-configuration>
